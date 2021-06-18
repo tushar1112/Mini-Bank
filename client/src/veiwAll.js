@@ -17,7 +17,7 @@ export default function VeiwAll() {
 
     return (
         <div>
-            <table className="table table-striped table-bordered table-light">
+            <table className="table table-striped table-bordered table-light auto-index">
               <thead>
                   <tr>                     
                       <th>Sr no</th>
@@ -33,7 +33,7 @@ export default function VeiwAll() {
                   data.map((post,index)=>{
                     return  post.fullname!==''?(
                        <tr key={index}>
-                            <td>{index+1}</td>
+                            <td></td>
                             <td>{post.fullname}</td>
                             <td>{post.email}</td>
                             <td>{post.accountNo}</td>
