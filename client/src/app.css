@@ -115,13 +115,18 @@ ul {
 }
 
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  height: 500px;
 }
 
 
 .tittle{
   height: 100vh;
+}
+
+.details{
+  color: red;
+}
+
+.center-image{
+  margin-left: 60vh;
 }
