@@ -76,6 +76,7 @@ export default function TransferMoney(props) {
 
     return (
         <div >
+        <h3 className="header1">Transfer Money</h3>
         <div className="container-transfer">
             <h3 className="header">TRANSFER  MONEY</h3>
             <form className="form" id="form">

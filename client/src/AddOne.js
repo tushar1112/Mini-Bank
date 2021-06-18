@@ -65,6 +65,8 @@ export class AddOne extends Component {
 
     render() {
         return (
+            <>
+            <h3 className="header1">Add Account</h3>
             <div className="tittle">
             <div className="container-transfer">
                 <div className="header"> ADD ACCOUNT</div>
@@ -109,6 +111,7 @@ export class AddOne extends Component {
                 </div>
             </div>
             </div>
+            </>
         )
     }
 }

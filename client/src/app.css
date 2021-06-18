@@ -23,7 +23,7 @@
   margin: auto;
   border-color: rgb(96, 96, 194);
   position: relative;
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
 ul {
@@ -110,6 +110,8 @@ ul {
   text-align: center;
   color: rgb(112, 112, 148);
   font-weight:900;
+  text-decoration: dashed;
+  background-color: rgb(148, 228, 197);
 }
 
 .center {

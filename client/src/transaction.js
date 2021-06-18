@@ -17,6 +17,9 @@ export default function Transaction() {
     }, [])
 
     return (
+        <>
+        <h3 className="header1">Transaction History</h3>
+        <br/><br/>
         <div>
             <table className="table table-striped table-bordered table-light auto-index">
               <thead>
@@ -45,5 +48,6 @@ export default function Transaction() {
               </tbody>
           </table>
         </div>
+        </>
     )
 }

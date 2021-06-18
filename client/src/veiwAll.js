@@ -17,6 +17,7 @@ export default function VeiwAll() {
 
     return (
         <div>
+            <h3 className="header1">Account Details</h3>
             <table className="table table-striped table-bordered table-light auto-index">
               <thead>
                   <tr>                     
