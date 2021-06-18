@@ -12,18 +12,17 @@ export default function TransferMoney(props) {
     const [Data, setData] = useState([])
 
     useEffect(() => {
-    
 
-
-    axios.get('http://localhost:4000/app/signup/mydata')
+    axios.get('/app/signup/mydata')
     .then(response=>{
         setData(response.data)
         console.log(Data)
     });
     
-    setuser1('')
-    setuser2('')
-    setuser2(props.location.state.holder)
+    setuser1("8227347")
+    setuser2("8227347")
+    setuser2(location.state.holder)
+    // console.log(props.location.state.holder)
 
     }, [])
 
@@ -42,7 +41,7 @@ export default function TransferMoney(props) {
             receiver:user2
           }
 
-        axios.post('http://localhost:4000/app/signup/change',val)
+        axios.post('/app/signup/change',val)
         .then(response=>{
             alert("successful transection !!")
         })
@@ -50,7 +49,7 @@ export default function TransferMoney(props) {
             alert("transection failed !!")
         })
 
-        axios.post('http://localhost:4000/app/signup/transfer',transfer)
+        axios.post('/app/signup/transfer',transfer)
         .then(response=>{
             console.log("data saved")
         })
@@ -83,12 +82,12 @@ export default function TransferMoney(props) {
                 
                 <div className="form-control">
                     <label>From : </label>
-                    <select value={user1} onChange={handleChange1} class="form-select form-select-sm" aria-label=".form-select-sm example" >
+                    <select value={user1} onChange={handleChange1} className="form-select form-select-sm" aria-label=".form-select-sm example" >
                         {
                             Data.map((data)=>{
                                 {
                                     return  data.fullname!==''?(
-                                        <option value={data.accountNo}>{data.accountNo}</option> ):null
+                                        <option value={data.accountNo}>{data.accountNo}</option> ):undefined
                                     }
                             }
                         )}
@@ -97,13 +96,13 @@ export default function TransferMoney(props) {
                 
                 <div className="form-control">
                     <label>To : </label>
-                    <select value={user2} onChange={handleChange2} class="form-select form-select-sm" aria-label=".form-select-sm example" >
+                    <select value={user2} onChange={handleChange2} className="form-select form-select-sm" aria-label=".form-select-sm example" >
                         {
                             Data.map((data)=>{
-                                {
+                                 {    
                                     return  data.fullname!==''?(
-                                        <option value={data.accountNo}>{data.accountNo}</option> ):null
-                                    }
+                                        <option value={data.accountNo}>{data.accountNo}</option> ):undefined
+                                    }      
                             }
                         )}
                     </select>

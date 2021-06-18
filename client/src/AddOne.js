@@ -50,7 +50,7 @@ export class AddOne extends Component {
           amount:this.state.amount
         }
 
-    axios.post('http://localhost:4000/app/signup',registered)
+    axios.post('/app/signup',registered)
       .then(response=>console.log(response.data))
      
       this.setState({

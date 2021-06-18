@@ -44,7 +44,8 @@ export default function VeiwAll() {
                                     holder:post.accountNo
                                 }
                             }}>
-                            <button className="btn btn-info button-tech">Transfer</button></Link></td>
+                            <button className="btn btn-info button-tech">Transfer</button></Link>
+                            </td>
                         </tr>
                         ):null
                     }
