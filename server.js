@@ -7,7 +7,6 @@ const routeUrls= require('./routes/routes')
 const cors=require('cors')
 const port=process.env.PORT || 5000;
 
-
 mongoose.connect(process.env.DATABASE_ACCESS,{ useNewUrlParser: true },()=>console.log("database connected 1"));
 
 app.use(express.json())

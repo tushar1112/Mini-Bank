@@ -10,25 +10,37 @@ export default function TransferMoney(props) {
     const location=useLocation()
     
     const [Data, setData] = useState([])
+    
 
     useEffect(() => {
 
     axios.get('/app/signup/mydata')
     .then(response=>{
         setData(response.data)
-        console.log(Data)
+        // console.log(Data)
     });
     
-    setuser1("8227347")
-    setuser2("8227347")
+
+    setuser1("636383637")
+    setuser2("636383637")
+    
+    if(location.state.holder!="")
     setuser2(location.state.holder)
     // console.log(props.location.state.holder)
+
+    
+     
 
     }, [])
 
     const changeMode=(event)=>{   
         event.preventDefault();
-        
+    
+        if(user1===user2)
+           return (alert("both account number must be different"))
+        if(user3===""||isNaN(user3))
+        return (alert("insert valid amount"))
+
         const val={
             user1:user1,
             user2:user2,

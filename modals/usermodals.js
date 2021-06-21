@@ -6,7 +6,7 @@ const dataTemplate=new mongoose.Schema({
         default:''
     },
     accountNo:{
-        type:String,
+        type:Number,
         default:''
     },
     email:{
@@ -32,5 +32,5 @@ const dataTemplate=new mongoose.Schema({
 })
 
 
-module.exports=mongoose.model("mytable",dataTemplate)
+module.exports=mongoose.model("mynewtable",dataTemplate)
 

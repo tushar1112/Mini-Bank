@@ -43,6 +43,14 @@ export class AddOne extends Component {
     onSubmit=(event)=>{
         event.preventDefault()
 
+        var letters = /^[A-Za-z]+$/;
+        if(!this.state.fullname.match(letters)||(this.state.fullname===""))
+            {
+            return (alert("Invalid fullname"))
+            }
+        if(this.state.accountNo===""||(isNaN(this.state.accountNo)))
+        return (alert("invalid accountNo"))
+        
         const registered={
           fullname:this.state.fullname,
           accountNo:this.state.accountNo,
@@ -90,7 +98,7 @@ export class AddOne extends Component {
                             />
                         
                             <input
-                            type="text"
+                            type="email"
                             placeholder="email"
                             onChange={this.ChangeEmail}
                             value={this.state.email}

@@ -1,6 +1,6 @@
 import React from 'react'
 import "bootstrap/dist/css/bootstrap.min.css"
-import {BrowserRouter as Router,Switch,Link, Route} from 'react-router-dom'
+import {BrowserRouter as Router,Switch, Route} from 'react-router-dom'
 import VeiwAll from './veiwAll'
 import Navbar from './navbar'
 import Transfer from './TransferMoney'
